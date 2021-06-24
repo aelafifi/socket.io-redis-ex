@@ -1,0 +1,31 @@
+{
+  "name": "socket.io-redis-ex",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/src/index.js",
+  "scripts": {
+    "cleanup": "rm -r -f dist",
+    "compile": "tsc",
+    "prepack": "npm run cleanup && npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aelafifi/socket.io-redis-ex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aelafifi/socket.io-redis-ex/issues"
+  },
+  "homepage": "https://github.com/aelafifi/socket.io-redis-ex#readme",
+  "dependencies": {
+    "debug": "^4.3.1",
+    "socket.io": "^4.1.2",
+    "socket.io-redis": "^6.1.1"
+  },
+  "devDependencies": {
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.4"
+  }
+}
