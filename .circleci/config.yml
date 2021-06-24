@@ -33,16 +33,6 @@ jobs:
           paths:
             - "."
 
-  test:
-    <<: *defaults
-    steps:
-      - attach_workspace:
-          at: ~/repo
-
-      - run:
-          name: Run Jest Tests
-          command: npm run test
-
   deploy:
     <<: *defaults
     steps:
@@ -61,14 +51,6 @@ workflows:
   build-deploy:
     jobs:
       - build:
-          filters:
-            tags:
-              only: /.*/
-            branches:
-              only: /.*/
-      - test:
-          requires:
-            - build
           filters:
             tags:
               only: /.*/
